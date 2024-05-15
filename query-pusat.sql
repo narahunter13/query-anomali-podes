@@ -417,9 +417,9 @@ SELECT r1.level_1_code                                                          
             r1002_n4.r1002k5 < 5 AND (r1002_n4.r1002k6a + (r1002_n4.r1002k6b)/60) > 1
         ) THEN 'A43;' END
        ) AS Anomali,
-       CONCAT('<a href="https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
+       CONCAT('https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               r1.assignment_id
-           , '/1a8fde37-032e-4ae3-85f7-e677337fbb76" target="_blank">Link Assignment</a>') AS Link
+           , '/1a8fde37-032e-4ae3-85f7-e677337fbb76') AS Link
 FROM tnk_e7a35bd4.root_table r1
         LEFT JOIN tnk_e7a35bd4.root_table_2 r2
                 ON r2.assignment_id = r1.assignment_id
