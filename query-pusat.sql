@@ -415,7 +415,12 @@ SELECT r1.level_1_code                                                          
         -- A43
         CASE WHEN (
             r1002_n4.r1002k5 < 5 AND (r1002_n4.r1002k6a + (r1002_n4.r1002k6b)/60) > 1
-        ) THEN 'A43;' END
+        ) THEN 'A43;' END,
+
+        -- A_BLT
+        CASE WHEN (
+            r2.r1501a_k4 < 900000 OR r2.r1501b_k4 <900000
+        ) THEN 'A_BLT;' END
        ) AS Anomali,
        CONCAT('https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               r1.assignment_id
