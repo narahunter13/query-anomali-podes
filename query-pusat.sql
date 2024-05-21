@@ -417,10 +417,20 @@ SELECT r1.level_1_code                                                          
             r1002_n4.r1002k5 < 5 AND (r1002_n4.r1002k6a + (r1002_n4.r1002k6b)/60) > 1
         ) THEN 'A43;' END,
 
-        -- A_BLT
+        -- AD1
         CASE WHEN (
             r2.r1501a_k4 < 900000 OR r2.r1501b_k4 <900000
-        ) THEN 'A_BLT;' END
+        ) THEN 'AD1;' END,
+
+        -- AD3
+        CASE WHEN (
+            r1.r401c <> ( r1.r501a1 + r1.r501a2 + r1.r501b )
+        ) THEN 'AD3;' END,
+
+        -- AD4
+        CASE WHEN (
+            r1.r304 <> (r1.r1101a + r1.r1101b + r1.r1101c)/100
+        ) THEN 'AD4;' END
        ) AS Anomali,
        CONCAT('https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               r1.assignment_id
