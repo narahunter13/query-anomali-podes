@@ -12,6 +12,7 @@ Berikut output dari Excel:
 ![Output](https://github.com/narahunter13/query-anomali-podes/blob/main/screen_excel.png)
 
 ## Tambahan
+Output dari query di bawah adalah ![Output](https://github.com/narahunter13/query-anomali-podes/blob/main/screen_sarana.png)
 ### Cek Kaidah Penamaan Sarana Pendidikan
 Silahkan klik [file ini](https://github.com/narahunter13/query-anomali-podes/blob/main/cek-nama-sarana-pendidikan.sql) atau [link ini](https://fasih-dashboard.bps.go.id/superset/sqllab/?savedQueryId=5212) untuk mengecek kaidah penamaan sarana pendidikan.
 
