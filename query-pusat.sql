@@ -359,7 +359,7 @@ SELECT r1.level_1_code                                                          
 
         -- A32
         CASE WHEN (
-            r1.r304 > 1000
+            r1.r304 > 1000 OR r1.r304 = 0
         ) THEN 'A32;' END,
 
         -- A33
