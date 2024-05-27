@@ -422,6 +422,11 @@ SELECT r1.level_1_code                                                          
             r2.r1501a_k4 < 900000 OR r2.r1501b_k4 <900000
         ) THEN 'AD1;' END,
 
+        -- AD2
+        CASE WHEN (
+            r1.r401a > (r2021.r401a_2021 * 2) OR r1.r401b > (r2021.r401b_2021 * 2)
+        ) THEN 'AD2;' END,
+
         -- AD3
         CASE WHEN (
             r1.r401c <> ( r1.r501a1 + r1.r501a2 + r1.r501b )
@@ -430,7 +435,17 @@ SELECT r1.level_1_code                                                          
         -- AD4
         CASE WHEN (
             r1.r304 <> (r1.r1101a + r1.r1101b + r1.r1101c)/100
-        ) THEN 'AD4;' END
+        ) THEN 'AD4;' END,
+
+        -- AD5
+        CASE WHEN (
+            (r1.r503b_value = 7 OR r1.r503b_value = 8 OR r1.r503b_value = 9 OR r1.r503b_value = 10) AND r1204b_value=1
+        ) THEN 'AD5;' END,
+
+        -- AD6
+        CASE WHEN (
+            r_iden.r106b IS NULL AND r_iden.r106c IS NULL
+        ) THEN 'AD6;' END
        ) AS Anomali,
        CONCAT('https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               r1.assignment_id
@@ -542,5 +557,9 @@ FROM tnk_e7a35bd4.root_table r1
                 ON r1002_n3.assignment_id = r1.assignment_id
         LEFT JOIN (SELECT * FROM tnk_e7a35bd4.r1002_nested r1002_4 WHERE r1002_4.index1 = 4) r1002_n4
                 ON r1002_n4.assignment_id = r1.assignment_id
+        LEFT JOIN tnk_e7a35bd4.podes2021 r2021
+                ON r2021.kddesa = r1.level_4_full_code
+        LEFT JOIN tiv_6a73e7cb.root_table r_iden
+                ON r1.level_4_full_code = r_iden.level_4_full_code
 
 ORDER BY r1.level_2_code, r1.level_3_code, r1.level_4_code
