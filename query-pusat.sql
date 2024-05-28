@@ -447,6 +447,7 @@ SELECT r1.level_1_code                                                          
             r_iden.r106b IS NULL AND r_iden.r106c IS NULL
         ) THEN 'AD6;' END
        ) AS Anomali,
+       r2.r1701 AS Catatan,
        CONCAT('https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               r1.assignment_id
            , '/1a8fde37-032e-4ae3-85f7-e677337fbb76') AS Link
