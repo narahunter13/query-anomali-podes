@@ -22,5 +22,8 @@ Silahkan klik [file ini](https://github.com/narahunter13/query-anomali-podes/blo
 ### Cek Kaidah Penamaan Sarana Ekonomi
 Silahkan klik [file ini](https://github.com/narahunter13/query-anomali-podes/blob/main/cek-nama-sarana-ekonomi.sql) atau [link ini](https://fasih-dashboard.bps.go.id/superset/sqllab/?savedQueryId=5220) untuk mengecek kaidah penamaan sarana ekonomi.
 
+### Cek Kaidah Penamaan Sarana Perbankan
+Silahkan klik [file ini](https://github.com/narahunter13/query-anomali-podes/blob/main/cek-nama-sarana-perbankan.sql) atau [link ini](https://fasih-dashboard.bps.go.id/superset/sqllab?savedQueryId=5699) untuk mengecek kaidah penamaan sarana perbankan.
+
 ## Laporkan Kesalahan Query
 Silahkan laporkan apabila ada kesalahan query [disini](http://s.bps.go.id/lapor_query_podes)
